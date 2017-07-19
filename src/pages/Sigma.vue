@@ -91,4 +91,7 @@ export default {
 #loader {
   margin: 2rem auto; }
 @media screen and (max-width: 911px), print {
+  .columns:not(.is-desktop) {
+    display: block; }
+}
 </style>
