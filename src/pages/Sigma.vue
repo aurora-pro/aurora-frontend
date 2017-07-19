@@ -45,7 +45,6 @@ export default {
       version: false,
       codename: false,
       links: this.$root.pages.sigma.links,
-      makers: this.$root.pages.sigma.main.makers,
       stats: []
     }
   },

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import Tooltip from 'vue-bulma-tooltip'
+import Tooltip from '@/components/Tooltip'
 export default {
   name: 'card',
   props: ['avatar', 'hype', 'name', 'content', 'overlay'],
