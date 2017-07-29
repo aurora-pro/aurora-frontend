@@ -34,7 +34,8 @@ var config = {
     landing: {
       projects: [
         {id: 'sigma', title: 'Apex Sigma', description: 'A bot made to bring knowledge to your discord server.', target: '/#sigma'},
-        {id: 'bdlinestickers', title: 'BetterDiscord LINE Stickers', description: 'A BetterDiscord plugin to add LINE stickers into emote menu.', target: 'https://github.com/awaken1ng/bd-linestickers'}
+        {id: 'bdlinestickers', title: 'BetterDiscord LINE Stickers', description: 'A BetterDiscord plugin to add LINE stickers into emote menu.', target: 'https://github.com/awaken1ng/bd-linestickers'},
+        {id: 'wkbreezedark', title: 'WaniKani Breeze Dark', description: 'A dark Stylish theme for WaniKani based on KDE Breeze.', target: 'https://github.com/valeth/wanikani-breeze-dark'}
       ],
       others: null
     },
