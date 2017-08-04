@@ -27,7 +27,7 @@ var config = {
     { id: 'sigma-commands', href: '/sigma/commands', text: 'Commands' },
     { id: 'sigma-about', href: '/sigma/about', text: 'About' },
     { id: '', href: 'https://github.com/aurora-pro', text: 'Github', icon: 'gh' },
-    { id: '', href: 'https://discordapp.com/invite/Ze9EfTd', text: 'Discord', icon: 'discord' }
+    { id: '', href: 'https://discordapp.com/invite/aEUCHwX', text: 'Discord', icon: 'discord' }
     ]
   },
   pages: {
