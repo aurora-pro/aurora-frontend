@@ -50,9 +50,9 @@ var config = {
           { name: 'Valeth', about: "Just popped up out of nowhere and started changing all the code! I haven't regretted it yet. He likes dry stuff.", avatar: 'https://www.gravatar.com/avatar/17d3a152085c9a4d08254acc7ee5d06e.png?s=128', overlay: 'ruby' }
         ],
         credits: [
-          { name: 'WaniKani Community Discord', image: 'https://cdn.discordapp.com/icons/219894896172072971/87bfee24d28fbee521278122c4083948.jpg?size=128' },
-          { name: 'Candy Kingdom 🍭', image: 'https://cdn.discordapp.com/icons/287978175927943188/bce937b6b9fa62b85ad5e85e844070a3.png?size=128' },  // CK has non break space in the name, which is Alt+0160
-          { name: 'Royal Destiny', image: 'https://cdn.discordapp.com/attachments/207939037909090304/332852425616785408/unknown.png' }
+          { name: 'WaniKani Community Discord', image: 'https://i.imgur.com/KmDVZ9a.jpg' },
+          { name: 'Candy Kingdom 🍭', image: 'https://i.imgur.com/8c7Bg4U.png' },  // CK has non break space in the name, which is Alt+0160
+          { name: 'Royal Destiny', image: 'https://i.imgur.com/gzhXXCD.png' }
         ]
       }
     }
