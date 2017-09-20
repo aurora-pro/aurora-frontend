@@ -74,7 +74,7 @@ body, button, input, select, textarea, .ui, [class*="tooltip--"]::after {
   background-attachment: fixed; }
 /* Backdrop colors */
 .light { background-image: linear-gradient(160deg, #18ae90, #16826c 50%, #145246 75%); }
-.dark { background-image: linear-gradient(160deg, #1c816c, #165b4d 50%, #0b372f 75%); }
+.dark { background-image: linear-gradient(160deg, #22004d, #170033 50%, #0b001a 75%); }
 .view {
   flex: 1;
   margin-top: 3rem; }

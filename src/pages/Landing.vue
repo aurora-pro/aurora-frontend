@@ -4,10 +4,10 @@
       <div class="columns container">
         <div class="column animated fadeIn">
           <div class="has-text-centered">
-            <img class="logo animated fadeIn" src="./../assets/logo_ap.png">
-            <h1 class="title">Welcome to the Aurora Project</h1>
+            <img class="logo animated fadeIn" src="./../assets/logo_lucia.png">
+            <h1 class="title">Welcome to <strong>Lucia's Cipher</strong></h1>
             <h2 class="subtitle">
-              We specialize in both
+              We specialize in
               <icon name='feather'></icon> style
               and
               <icon name='shield'></icon> security.
@@ -54,21 +54,35 @@ export default {
   min-height: unset;
   color: white;
 }
-/*.hero { background: linear-gradient(160deg, #1c816c, #165b4d 50%, #0b372f 75%); }*/
+/*.hero { background: linear-gradient(160deg, #450099, #2e0066 50%, #170033 75%); }*/
 .hero, .tile, .title, .subtitle { color: #fff; }
 .hero .columns, .hero .columns .column { margin: auto; }
 .logo { max-width: 400px; }
 .tile { margin: 10px auto;
   max-width: 700px;
+  color: #450099;
   border-radius: 3px;
   background: unset;
   background-size: cover;
-  transition: box-shadow .15s ease-in-out; }
-.tile:hover { box-shadow: 0 0 20px rgba(0,0,0,0.75); cursor: pointer; }
-.tile.sigma { background-image: url("./../assets/SigmaTile.png"); }
-.tile.hastebin { background-image: url("./../assets/HasteTile.png"); }
-.tile.bdlinestickers { background-image: url("./../assets/BDLineStickersTile.png"); }
-.tile.wkbreezedark { background-image: url("./../assets/WKBDTile.png");}
+  transition: box-shadow .15s ease-in-out;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+.tile:hover {
+  box-shadow: 0 0 20px rgba(200,200,200,0.20);
+  cursor: pointer;
+}
+.tile.sigma { background-image: url("./../assets/LandingTileLight.png"); }
+.tile.hastebin { background-image: url("./../assets/LandingTileLight.png"); }
+.tile.bdlinestickers { background-image: url("./../assets/LandingTileLight.png"); }
+.tile.wkbreezedark { background-image: url("./../assets/LandingTileLight.png");}
+.tile.sigma:hover { color: #0f705d; }
+.tile.hastebin:hover { color: #2980B9; }
+.tile.bdlinestickers:hover { color: #0066ff; }
+.tile.wkbreezedark:hover { color: #D35400; }
 @media screen and (max-width: 500px), print { .logo {max-width: 300px; } }
 @media screen and (max-width: 400px), print { .logo {max-width: 200px; } }
 @media screen and (max-width: 936px), print { .columns { display: block !important; } }

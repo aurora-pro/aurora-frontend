@@ -5,7 +5,7 @@
         <div class="columns">
           <div class="column is-two-thirds">
             <p>
-              © Aurora Project: The place where <span class="robots">robots</span>, <span class="foxes">foxes</span> and <span class="tomatoes">tomatoes</span> are worshiped.
+              © Lucia's Cipher: The place where <span class="robots">robots</span>, <span class="foxes">foxes</span> and <span class="tomatoes">tomatoes</span> are worshiped.
             </p>
           </div>
           <div class="column">

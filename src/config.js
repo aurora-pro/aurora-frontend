@@ -5,10 +5,10 @@ import Commands from '@/pages/Commands'
 import About from '@/pages/About'
 import NotFound from '@/pages/NotFound'
 
-var api = 'https://data.auroraproject.xyz/data'
+var api = 'https://api.lucia.moe/data'
 var routing = [
-  { path: '*', meta: { title: 'Aurora Project - Not found' }, name: 'ap-notfound', component: NotFound },
-  { path: '/', meta: { title: 'Aurora Project' }, name: 'ap-landing', component: Landing },
+  { path: '*', meta: { title: 'Lucia\'s Cipher - Not found' }, name: 'ap-notfound', component: NotFound },
+  { path: '/', meta: { title: 'Lucia\'s Cipher' }, name: 'ap-landing', component: Landing },
   { path: '/sigma', meta: { title: 'Sigma: The Database' }, name: 'sigma', component: Sigma },
   { path: '/sigma/commands', meta: { title: 'Sigma: The Database - Commands' }, name: 'sigma-commands', component: Commands },
   { path: '/sigma/about', meta: { title: 'Sigma: The Database - About' }, name: 'sigma-about', component: About }
@@ -34,7 +34,7 @@ var config = {
     landing: {
       projects: [
         {id: 'sigma', title: 'Apex Sigma', description: 'A bot made to bring knowledge to your discord server.', target: '/#sigma'},
-        {id: 'bdlinestickers', title: 'BetterDiscord LINE Stickers', description: 'A BetterDiscord plugin to add LINE stickers into emote menu.', target: 'https://github.com/awaken1ng/bd-linestickers'},
+        {id: 'bdlinestickers', title: 'BetterDiscord LINE Stickers', description: 'A BetterDiscord plugin to add LINE stickers to the emote menu.', target: 'https://github.com/awaken1ng/bd-linestickers'},
         {id: 'wkbreezedark', title: 'WaniKani Breeze Dark', description: 'A dark Stylish theme for WaniKani based on KDE Breeze.', target: 'https://github.com/valeth/wanikani-breeze-dark'}
       ],
       others: null
