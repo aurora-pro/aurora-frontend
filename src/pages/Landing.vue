@@ -4,7 +4,7 @@
       <div class="columns container">
         <div class="column animated fadeIn">
           <div class="has-text-centered">
-            <img class="logo animated fadeIn" src="./../assets/logo_lucia.png">
+            <img class="logo animated fadeIn" src="./../assets/logo_lucia_400.png">
             <h1 class="title">Welcome to <strong>Lucia's Cipher</strong></h1>
             <h2 class="subtitle">
               We specialize in
@@ -60,7 +60,7 @@ export default {
 .logo { max-width: 400px; }
 .tile { margin: 10px auto;
   max-width: 700px;
-  color: #450099;
+  color: #1B6F5F;
   border-radius: 3px;
   background: unset;
   background-size: cover;
@@ -72,14 +72,14 @@ export default {
   transition:.5s;
 }
 .tile:hover {
-  box-shadow: 0 0 20px rgba(200,200,200,0.20);
+  box-shadow: 0 0 20px rgba(0,0,0,0.75);
   cursor: pointer;
 }
 .tile.sigma { background-image: url("./../assets/LandingTileLight.png"); }
 .tile.hastebin { background-image: url("./../assets/LandingTileLight.png"); }
 .tile.bdlinestickers { background-image: url("./../assets/LandingTileLight.png"); }
 .tile.wkbreezedark { background-image: url("./../assets/LandingTileLight.png");}
-.tile.sigma:hover { color: #0f705d; }
+.tile.sigma:hover { color: #450099; }
 .tile.hastebin:hover { color: #2980B9; }
 .tile.bdlinestickers:hover { color: #0066ff; }
 .tile.wkbreezedark:hover { color: #D35400; }
