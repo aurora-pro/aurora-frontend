@@ -4,14 +4,16 @@ import Sigma from '@/pages/Sigma'
 import Commands from '@/pages/Commands'
 import About from '@/pages/About'
 import NotFound from '@/pages/NotFound'
+import Leaderboards from '@/pages/Leaderboards'
 
 var api = 'https://api.lucia.moe/data'
 var routing = [
   { path: '*', meta: { title: 'Lucia\'s Cipher - Not found' }, name: 'ap-notfound', component: NotFound },
   { path: '/', meta: { title: 'Lucia\'s Cipher' }, name: 'ap-landing', component: Landing },
-  { path: '/sigma', meta: { title: 'Sigma: The Database' }, name: 'sigma', component: Sigma },
-  { path: '/sigma/commands', meta: { title: 'Sigma: The Database - Commands' }, name: 'sigma-commands', component: Commands },
-  { path: '/sigma/about', meta: { title: 'Sigma: The Database - About' }, name: 'sigma-about', component: About }
+  { path: '/sigma', meta: { title: 'Sigma: The Database Giant' }, name: 'sigma', component: Sigma },
+  { path: '/sigma/commands', meta: { title: 'Sigma: Commands' }, name: 'sigma-commands', component: Commands },
+  { path: '/sigma/about', meta: { title: 'Sigma: About' }, name: 'sigma-about', component: About },
+  { path: '/sigma/leaderboards', meta: { title: 'Sigma: Leaderboards' }, name: 'sigma-leaderboards', component: Leaderboards }
 ]
 var config = {
   api: api,
@@ -24,8 +26,9 @@ var config = {
     conditional: null,
     // Leave IDs empty for non router links
     right: [
-    { id: 'sigma-commands', href: '/sigma/commands', text: 'Commands' },
     { id: 'sigma-about', href: '/sigma/about', text: 'About' },
+    { id: 'sigma-commands', href: '/sigma/commands', text: 'Commands' },
+    { id: 'sigma-commands', href: '/sigma/leaderboards', text: 'Leaderboards' },
     { id: '', href: 'https://github.com/lu-ci', text: 'Github', icon: 'gh' },
     { id: '', href: 'https://discordapp.com/invite/aEUCHwX', text: 'Discord', icon: 'discord' }
     ]
