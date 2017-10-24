@@ -20,7 +20,7 @@
         </td>
         <td v-if="what === 'currency'">{{row.currency}} <!--<span class="symbol">⚜ Kud</span>--></td>
         <td v-else-if="what === 'experience'">{{row.experience}}</td>
-        <td v-else-if="what === 'cookies'"></td>
+        <td v-else-if="what === 'cookies'">{{row.cookies}}</td>
       </tr>
     </tbody>
 

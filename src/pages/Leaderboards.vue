@@ -13,11 +13,9 @@
                 <a class="nav-item" data-what="experience">
                   Experience
                 </a>
-                <!--
                 <a class="nav-item" data-what="cookies">
                   Cookies
                 </a>
-                -->
               </div>
               <div class="sub tabs">
                 <a class="nav-item is-active" data-where="global">
@@ -112,7 +110,12 @@ export default {
       this.what = what
       this.headers = headers[what]
       api.get(`${what}/global`, (data) => {
-        this.data = data.data
+        if (what === 'cookies') {
+          this.data = data.data.leaderboard
+          console.log(this.data)
+        } else {
+          this.data = data.data
+        }
       })
       $(event.target).addClass('is-active')
     })
@@ -121,7 +124,6 @@ export default {
       // let what = $(event.target).attr('data-what')
       $(event.target).addClass('is-active')
     })
-
     api.get('currency/global', (data) => {
       if (data.response.code === 200) {
         this.data = data.data
@@ -160,7 +162,7 @@ export default {
   display: inline-flex;
   width: 100%;
 }
-.switch .main.tabs .nav-item { width: 50%; }
+.switch .main.tabs .nav-item { width: 33%; }
 .switch .sub.tabs .nav-item { width: 100%; }
 
 .switch .tabs .nav-item.is-active {
