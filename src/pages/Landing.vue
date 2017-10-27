@@ -79,10 +79,12 @@ export default {
 .tile.hastebin { background-image: url("./../assets/LandingTileLight.png"); }
 .tile.bdlinestickers { background-image: url("./../assets/LandingTileLight.png"); }
 .tile.wkbreezedark { background-image: url("./../assets/LandingTileLight.png");}
+.tile.kyanitecoll { background-image: url("./../assets/LandingTileLight.png");}
 .tile.sigma:hover { color: #450099; }
 .tile.hastebin:hover { color: #2980B9; }
-.tile.bdlinestickers:hover { color: #0066ff; }
+.tile.bdlinestickers:hover { color: #00b84f; }
 .tile.wkbreezedark:hover { color: #D35400; }
+.tile.kyanitecoll:hover { color: #0066ff; }
 @media screen and (max-width: 500px), print { .logo {max-width: 300px; } }
 @media screen and (max-width: 400px), print { .logo {max-width: 200px; } }
 @media screen and (max-width: 936px), print { .columns { display: block !important; } }
