@@ -18,53 +18,77 @@
 /* Ribbon styling */
 
 /* Tiers */
+/* Garnet */
+.credit .ribbon.tier-6 .corner { background: #671d43; }
+.credit .ribbon.tier-6 .container {
+  border-left: 1px solid #280b1a;
+  border-right: 1px solid #280b1a; }
+.donors .credit .ribbon.tier-6 .base:after {
+  border-left: 1px dashed #280b1a;
+	border-right: 1px dashed #280b1a; }
+.donors .credit .ribbon.tier-6 .base:before {
+	border-left: 1px dashed #b33275;
+	border-right: 1px dashed #b33275; }
+
+/* Danburite */
+.credit .ribbon.tier-5 .corner { background: #BF8B23; }
+.credit .ribbon.tier-5 .container {
+  border-left: 1px solid #412f0c;
+  border-right: 1px solid #412f0c; }
+.donors .credit .ribbon.tier-5 .base:after {
+  border-left: 1px dashed #412f0c;
+	border-right: 1px dashed #412f0c; }
+.donors .credit .ribbon.tier-5 .base:before {
+	border-left: 1px dashed #dfb053;
+	border-right: 1px dashed #dfb053; }
+
 /* Cavansite*/
-.credit .ribbon.tier-4 .corner { background: #00AFBF; }
+.credit .ribbon.tier-4 .corner { background: #5ed6f1; }
 .credit .ribbon.tier-4 .container {
-  border-left: 1px solid #005363;
-  border-right: 1px solid #005363; }
+  border-left: 1px solid #0e89a4;
+  border-right: 1px solid #0e89a4; }
 .donors .credit .ribbon.tier-4 .base:after {
-  border-left: 1px dashed #005363;
-	border-right: 1px dashed #005363; }
+  border-left: 1px dashed #0e89a4;
+	border-right: 1px dashed #0e89a4; }
 .donors .credit .ribbon.tier-4 .base:before {
-	border-left: 1px dashed #05CDDE;
-	border-right: 1px dashed #05CDDE; }
+	border-left: 1px dashed #b9edf9;
+	border-right: 1px dashed #b9edf9; }
 
 /* Beryl */
-.donors .credit .ribbon.tier-3 .corner { background: #FFD100; }
+.donors .credit .ribbon.tier-3 .corner { background: #d9c660; }
 .donors .credit .ribbon.tier-3 .container {
-  border-left: 1px solid #796500;
-  border-right: 1px solid #796500; }
+  border-left: 1px solid #7b6d1e;
+  border-right: 1px solid #7b6d1e; }
 .donors .credit .ribbon.tier-3 .base:after {
-  border-left: 1px dashed #796500;
-	border-right: 1px dashed #796500; }
+  border-left: 1px dashed #7b6d1e;
+	border-right: 1px dashed #7b6d1e; }
 .donors .credit .ribbon.tier-3 .base:before {
-	border-left: 1px dashed #FFFF01;
-	border-right: 1px dashed #FFFF01; }
+	border-left: 1px dashed #e6da98;
+	border-right: 1px dashed #e6da98; }
 
 /* Hiddenite */
-.donors .credit .ribbon.tier-2 .corner { background: #00BB58; }
+.donors .credit .ribbon.tier-2 .corner { background: #31a36f; }
 .donors .credit .ribbon.tier-2 .container {
-  border-left: 1px solid #005A2D;
-  border-right: 1px solid #005A2D; }
+  border-left: 1px solid #82499c;
+  border-right: 1px solid #82499c; }
 .donors .credit .ribbon.tier-2 .base:after {
-  border-left: 1px dashed #005A2D;
-	border-right: 1px dashed #005A2D; }
+  border-left: 1px dashed #82499c;
+	border-right: 1px dashed #82499c; }
 .donors .credit .ribbon.tier-2 .base:before {
-	border-left: 1px dashed #01D979;
-	border-right: 1px dashed #01D979; }
+	border-left: 1px dashed #4eca92;
+	border-right: 1px dashed #4eca92; }
 
 /* Ametrine */
-.donors .credit .ribbon.tier-1 .corner { background: #BA8EFF; }
+.donors .credit .ribbon.tier-1 .corner { background: #c3a1d3; }
 .donors .credit .ribbon.tier-1 .container {
-  border-left: 1px solid #613DC1;
-  border-right: 1px solid #613DC1; }
+  border-left: 1px solid #9b63b6;
+  border-right: 1px solid #9b63b6; }
 .donors .credit .ribbon.tier-1 .base:after {
-  border-left: 1px dashed #613DC1;
-	border-right: 1px dashed #613DC1; }
+  border-left: 1px dashed #9b63b6;
+	border-right: 1px dashed #9b63b6; }
 .donors .credit .ribbon.tier-1 .base:before {
-	border-left: 1px dashed #E3B4FF;
-	border-right: 1px dashed #E3B4FF; }
+	border-left: 1px dashed #d3bade;
+	border-right: 1px dashed #d3bade; }
 
 .ribbon .container {
 	position: relative;
