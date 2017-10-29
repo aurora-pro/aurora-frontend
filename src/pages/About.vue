@@ -114,8 +114,9 @@ export default {
 .donors .credit .image {
   position: absolute;
   z-index: 5; }
-.credit .image img { border-radius: 5rem; }
-
+img {
+  border-radius: 5rem;
+  background-color: #2C2F33; }
 .donors .credit .ribbon {
   left: 54px;
   bottom: 33px;
