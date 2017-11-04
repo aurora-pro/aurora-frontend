@@ -15,7 +15,7 @@
     </section>
 
     <section class="stats section has-text-centered">
-      <div class="container">
+      <div class="fluid">
         <h1 class="title"><icon name="bar-chart-2"></icon> Stats</h1>
         <loader id="loader" inline></loader>
         <div class="columns">
