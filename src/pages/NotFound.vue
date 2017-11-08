@@ -37,7 +37,7 @@
 export default {
   name: 'ap-notfound',
   data () {
-    var roll = Math.floor((Math.random() * 5) + 0)
+    var roll = Math.floor((Math.random() * 2) + 0)
     var data = null
     console.log(roll)
     if (roll === 0) {
@@ -49,26 +49,6 @@ export default {
         glitch: true,
         error_title: '%',
         error_description: 'Hxppy thxughts.'
-      }
-    } else if (roll === 1) {
-      data = {
-        poem: {
-          title: 'W6EQc_xWuCB',
-          content: 'I can feel the tenderness of her skin through the knife, as if it were an extension of my sense of touch. My body nearly convulses. There\'s something incredibly faint, deep down, that screams to resist this uncontrollable pleasure. But I can already tell that I\'m being pushed over the edge. I can\'t...I can\'t stop myself.'
-        },
-        glitch: true,
-        error_title: 'Open Your Third Eye',
-        error_description: 'When he\'s too tired for anything.'
-      }
-    } else if (roll === 2) {
-      data = {
-        poem: {
-          title: 'V9hhkRs2rQ=',
-          content: 'A rotating wheel. Turning an axle. Grinding. Bolthead. Linear gearbox. Falling sky. Seven holy stakes.\nA docked ship. A portal to another world. A thin rope tied to a thick rope. A torn harness. Parabolic gearbox.\nExpanding universe. Time controlled by slipping cogwheels. Existence of God. Swimming with open water in all directions.\nDrowning. A prayer written in blood. A prayer written in time-devouring snakes with human eyes.\nA thread connecting all living human eyes. A kaleidoscope of holy stakes. Exponential gearbox.\nA sky of exploding stars. God disproving the existence of God. A wheel rotating in six dimensions.\nForty gears and a ticking clock. A clock that ticks one second for every rotation of the planet.\nA clock that ticks forty times every time it ticks every second time. A bolthead of holy stakes tied to\nthe existence of a docked ship to another world. A kaleidoscope of blood written in clocks. A time-devouring\nprayer connecting a sky of forty gears and open human eyes in all directions. Breathing gearbox. Breathing bolthead. \nBreathing ship. Breathing portal. Breathing snakes. Breathing God. Breathing blood. Breathing holy stakes.\nBreathing human eyes. Breathing time. Breathing prayer. Breathing sky. Breathing wheel.'
-        },
-        glitch: true,
-        error_title: 'Wheel',
-        error_description: 'Dancing blade on a breathing ribcage.'
       }
     } else {
       data = {
