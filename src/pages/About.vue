@@ -39,23 +39,10 @@
         </div>
       </div>
     </section>
-
-    <section class="animated fadeIn donors section">
-      <h1 class="title has-text-centered"><icon name="heart"></icon> Donors</h1>
-      <div class="container">
-        <loader id="loader" inline style="margin: 1rem 0"></loader>
-        <div v-for="donor in donors" class="credit">
-          <figure class="image is-96x96"><img :src=donor.avatar></figure>
-          <ribbon :class="'tier-' + donor.tier"></ribbon>
-          <h6>{{ donor.name }}</h6>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
 <script>
-import $ from 'jquery'
 import Navigation from '@/components/Navigation'
 import Card from '@/components/Card'
 import Icon from '@/components/Icon'
@@ -71,14 +58,7 @@ export default {
       donors: []
     }
   },
-  components: { Navigation, Card, Icon, Ribbon, Loader },
-  mounted () {
-    let api = this.$root.api
-    $.get(`${api}/donors`, (data) => {
-      $('#loader').hide()
-      this.donors = data.donors
-    })
-  }
+  components: { Navigation, Card, Icon, Ribbon, Loader }
 }
 </script>
 
