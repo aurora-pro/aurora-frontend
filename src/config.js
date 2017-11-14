@@ -58,7 +58,7 @@ var config = {
         ],
         credits: [
           { name: 'WaniKani Community Discord', image: 'https://i.imgur.com/KmDVZ9a.jpg' },
-          { name: 'Candy Kingdom 🍭', image: 'https://i.imgur.com/8c7Bg4U.png' },  // CK has non break space in the name, which is Alt+0160
+          { name: 'Candy Kingdom 🍭', image: 'https://i.imgur.com/C9iRSmZ.png' },  // CK has non break space in the name, which is Alt+0160
           { name: 'Royal Destiny', image: 'https://i.imgur.com/gzhXXCD.png' }
         ]
       }
