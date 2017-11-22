@@ -2,14 +2,14 @@
   <div>
     <section class="animated fadeIn about section">
       <h1 class="title has-text-centered"><icon name="info"></icon> About Sigma</h1>
-      <div class="container">
+      <div class="ui container">
         <span>Apex Sigma</span> was created to connect to as many API endpoints as possible to bring you large amounts of data you might possibly need. <span>Wikipedia</span> articles, <span>reddit</span> posts, funny cat vidoes from <span>YouTube</span>, tasty <span>recipes</span>, <span>dictionary</span> definition, both official and urban, <span>anime</span> data and loads more. Alongside a plethora of search capabilities, Sigma has intuitive <span>moderation</span> modules to help you organize, optimize, and control, your <span>Discord</span> server. To help your community liven up and grow while having fun, it also comes with numerous fun <span>utilities</span>, <span>minigames</span> and user <span>interactions</span> for your enjoyment.
       </div>
     </section>
 
     <section class="animated fadeIn makers section">
       <h1 class="animated fadeIn title has-text-centered"><icon name="flag"></icon> Developers</h1>
-      <div class="container">
+      <div class="ui container">
         <div class="columns">
           <div class="column" v-for="maker in makers">
             <card
@@ -27,7 +27,7 @@
 
     <section class="animated fadeIn credits section">
       <h1 class="title has-text-centered"><icon name="star"></icon> Credit Where Credit Is Due</h1>
-      <div class="container">
+      <div class="ui container">
         <p class="has-text-centered">An enormous thank you to these communities that provided help and support.</p>
         <div class="credits-container">
           <div v-for="credit in credits" class="credit">

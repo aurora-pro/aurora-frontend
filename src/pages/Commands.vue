@@ -1,7 +1,7 @@
 <template>
   <div>
     <loader id="loader"></loader>
-    <div class="container fadeIn" style="width: auto;">
+    <div class="ui container fadeIn" style="width: auto;">
       <h1 class="title"><fa icon="fa-terminal"></fa> Commands</h1>
       <div class="ui styled accordion category animated fadeIn" v-for="category in commands">
         <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{category.name }}</div>

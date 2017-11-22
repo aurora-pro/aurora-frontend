@@ -26,6 +26,26 @@
           <div class="column">
             <div class="ui segment">
               <h1 class="method-title has-text-centered">
+                <i class="fa fa-paypal" aria-hidden="true"></i> PayPal</h1>
+              <div class="ui card centered">
+                <div class="content">
+                  <div class="description">
+                    In case you don't want to or can't commit to a monthly subscription but still want to help
+                    you can send money <strong>directly via PayPal</strong> and it's PayPal.me page.
+                    Every little bit counts and makes a difference. While rewards are limited to only Patreon
+                    supporters, donating via PayPal will still reserve you a spot in the donor section with an
+                    ashen colored ribbon.
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a href="https://www.paypal.me/AleksaRadovic" class="ui button" style="width: 100%;">Donate</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui segment">
+              <h1 class="method-title has-text-centered">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 100 96">
                   <g fill="#363636" fill-rule="evenodd">
                     <path d="M64.1102,0.1004 C44.259,0.1004 28.1086,16.2486 28.1086,36.0986 C28.1086,55.8884 44.259,71.989 64.1102,71.989 C83.9,71.989 100,55.8884 100,36.0986 C100,16.2486 83.9,0.1004 64.1102,0.1004"
@@ -46,26 +66,6 @@
                 </div>
                 <div class="extra content">
                   <a href="https://www.patreon.com/ApexSigma" class="ui button" style="width: 100%;">Subscribe</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="ui segment">
-              <h1 class="method-title has-text-centered">
-                <i class="fa fa-paypal" aria-hidden="true"></i> PayPal</h1>
-              <div class="ui card centered">
-                <div class="content">
-                  <div class="description">
-                    In case you don't want to or can't commit to a monthly subscription but still want to help
-                    you can send money <strong>directly via PayPal</strong> and it's PayPal.me page.
-                    Every little bit counts and makes a difference. While rewards are limited to only Patreon
-                    supporters, donating via PayPal will still reserve you a spot in the donor section with an
-                    ashen colored ribbon.
-                  </div>
-                </div>
-                <div class="extra content">
-                  <a href="https://www.paypal.me/AleksaRadovic" class="ui button" style="width: 100%;">Donate</a>
                 </div>
               </div>
             </div>
