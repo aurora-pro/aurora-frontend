@@ -7,9 +7,9 @@
 </template>
 
 <script>
+import $ from 'jquery'
 import navigation from '@/components/nav'
 import tail from '@/components/Footer'
-
 export default {
   name: 'app',
   components: { navigation, tail },
@@ -22,6 +22,7 @@ export default {
     }
   },
   mounted () {
+    startSnow()
     let app = this
     let bus = this.$root.eventBus
     let preloader = document.getElementById('preloader')
@@ -43,6 +44,13 @@ export default {
       app.classObject.light = false
     }
   }
+}
+function startSnow () {
+  $('#app').snowfall(
+    {
+      flakeCount: 50, maxSpeed: 5, round: true, shadow: false, minSize: 2, maxSize: 5
+    }
+  )
 }
 </script>
 

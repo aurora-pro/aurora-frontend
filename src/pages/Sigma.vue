@@ -1,15 +1,17 @@
 <template>
   <div>
     <section class="hero fadeIn" >
-      <div class="hero-body has-text-centered animated fadeIn">
-        <img class="logo animated fadeIn" src="./../assets/SigmaLightWebFestive.png">
-        <h1 class="title animated fadeIn">This is <strong>Sigma</strong>, the Database Giant.</h1>
-        <h2 class="subtitle animated fadeIn">A bot made to bring knowledge to your Discord server.</h2>
-        <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
-        <br />
-        <div class="version">
-          <span class="tag is-white animated fadeIn" v-if=version>Version {{ `${version.major}.${version.minor}.${version.patch}` }}</span>
-          <span class="tag is-white animated fadeIn" v-if=codename>Codename {{ codename }}</span>
+      <div id="snow">
+        <div class="hero-body has-text-centered animated fadeIn">
+          <img class="logo animated fadeIn" src="./../assets/SigmaLightWebFestive.png">
+          <h1 class="title animated fadeIn">This is <strong>Sigma</strong>, the Database Giant.</h1>
+          <h2 class="subtitle animated fadeIn">A bot made to bring knowledge to your Discord server.</h2>
+          <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
+          <br />
+          <div class="version">
+            <span class="tag is-white animated fadeIn" v-if=version>Version {{ `${version.major}.${version.minor}.${version.patch}` }}</span>
+            <span class="tag is-white animated fadeIn" v-if=codename>Codename {{ codename }}</span>
+          </div>
         </div>
       </div>
     </section>
@@ -37,7 +39,6 @@ import Fa from '@/components/FaIcon'
 import Icon from '@/components/Icon'
 import Stat from '@/components/Stat'
 import Loader from '@/components/Loader'
-
 export default {
   name: 'sigma',
   data () {
