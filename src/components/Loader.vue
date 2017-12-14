@@ -1,5 +1,5 @@
 <template>
-  <div v-if="inline == undefined" :id=id class="ui segment">
+  <div v-if="inline == undefined" :id=id>
     <div class="ui active dimmer">
       <div class="ui loader"></div>
     </div>

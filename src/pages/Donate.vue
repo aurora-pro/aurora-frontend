@@ -24,7 +24,7 @@
       <div class="ui container">
         <div class="columns">
           <div class="column">
-            <div class="ui segment">
+            <div>
               <h1 class="method-title has-text-centered">
                 <i class="fa fa-paypal" aria-hidden="true"></i> PayPal</h1>
               <div class="ui card centered">
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="column">
-            <div class="ui segment">
+            <div>
               <h1 class="method-title has-text-centered">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 100 96">
                   <g fill="#363636" fill-rule="evenodd">
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="column">
-            <div class="ui segment">
+            <div>
               <h1 class="method-title has-text-centered">
                 <icon name="github"></icon> GitHub</h1>
               <div class="ui card centered">
