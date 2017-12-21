@@ -45,13 +45,31 @@
                       <h2 class="ui header"><icon name="message-square"></icon> Greeting Message</h2>
                     </div>
                     <div class="column">
-                      <p v-if="settings.Greet" class="ui label tag teal settingstatus">Enabled</p>
-                      <p v-else class="ui label tag red settingstatus">Disabled</p>
+                      <div v-if="settings.Greet" class="ui label horizontal teal settingstatus">Enabled</div>
+                      <div v-else class="ui label horizontal red settingstatus">Disabled</div>
                     </div>
                   </div>
                   <div class="ui divider"></div>
                   <div class="ui row">
                     <p v-if="settings.GreetMessage"> {{ settings.GreetMessage }} </p>
+                    <p v-else> No Greeting Message set </p>
+                  </div>
+                </div>
+              </div>
+              <div class="ui row">
+                <div class="ui segment raised">
+                  <div class="ui row stackable grid">
+                    <div class="column">
+                      <h2 class="ui header"><icon name="message-square"></icon> Goodbye Message</h2>
+                    </div>
+                    <div class="column">
+                      <div v-if="settings.Bye" class="ui label horizontal teal settingstatus">Enabled</div>
+                      <div v-else class="ui label horizontal red settingstatus">Disabled</div>
+                    </div>
+                  </div>
+                  <div class="ui divider"></div>
+                  <div class="ui row">
+                    <p v-if="settings.ByeMessage"> {{ settings.ByeMessage }} </p>
                     <p v-else> No Greeting Message set </p>
                   </div>
                 </div>
