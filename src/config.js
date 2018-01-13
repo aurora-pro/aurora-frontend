@@ -6,7 +6,6 @@ import About from '@/pages/About'
 import NotFound from '@/pages/NotFound'
 import Leaderboards from '@/pages/Leaderboards'
 import Donate from '@/pages/Donate'
-import Settings from '@/pages/Settings'
 
 var api = 'https://api.lucia.moe/rest'
 // var api = 'http://127.0.0.1:8081/rest'
@@ -17,8 +16,7 @@ var routing = [
   { path: '/sigma/commands', meta: { title: 'Sigma: Commands' }, name: 'sigma-commands', component: Commands },
   { path: '/sigma/about', meta: { title: 'Sigma: About' }, name: 'sigma-about', component: About },
   { path: '/sigma/leaderboards', meta: { title: 'Sigma: Leaderboards' }, name: 'sigma-leaderboards', component: Leaderboards },
-  { path: '/sigma/donate', meta: { title: 'Sigma: Donations' }, name: 'sigma-donation', component: Donate },
-  { path: '/sigma/settings', meta: { title: 'Sigma: Settings' }, name: 'sigma-settings', component: Settings }
+  { path: '/sigma/donate', meta: { title: 'Sigma: Donations' }, name: 'sigma-donation', component: Donate }
 ]
 var config = {
   api: api,
