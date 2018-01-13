@@ -53,7 +53,7 @@ export default {
     }
   },
   mounted () {
-    var socket = io.connect('//api.lucia.moe/webs/sigma/stats')
+    var socket = io.connect('wss://api.lucia.moe/webs/sigma/stats')
     // var socket = io.connect('//127.0.0.1:8081/webs/sigma/leaderboard')
     let vuePage = this
     socket.on('leaderboard_push', function (data) {

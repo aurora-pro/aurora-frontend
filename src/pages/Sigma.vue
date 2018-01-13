@@ -61,7 +61,7 @@ export default {
   }
 }
 function updateStats (ctx) {
-  var socket = io.connect('//api.lucia.moe/webs/sigma/stats')
+  var socket = io.connect('wss://api.lucia.moe/webs/sigma/stats')
   // var socket = io.connect('//127.0.0.1:8081/webs/sigma/stats')
   socket.on('sigma_stats', function (data) {
     data = JSON.parse(data)
@@ -73,7 +73,7 @@ function updateStats (ctx) {
     ctx.stats.push({label: 'Songs Played', value: data.special.songs_played, icon: 'play'})
   })
   statPush()
-  setInterval(statPush, 1000)
+  setInterval(statPush, 5000)
   function statPush () {
     socket.emit('get_stats', {stat: 'all'})
   }
