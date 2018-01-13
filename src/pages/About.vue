@@ -3,7 +3,7 @@
     <section class="animated fadeIn about section">
       <h1 class="title has-text-centered"><icon name="info"></icon> About Sigma</h1>
       <div class="ui container">
-        <span>Apex Sigma</span> was created to connect to as many API endpoints as possible to bring you large amounts of data you might possibly need. <span>Wikipedia</span> articles, <span>reddit</span> posts, funny cat vidoes from <span>YouTube</span>, tasty <span>recipes</span>, <span>dictionary</span> definition, both official and urban, <span>anime</span> data and loads more. Alongside a plethora of search capabilities, Sigma has intuitive <span>moderation</span> modules to help you organize, optimize, and control, your <span>Discord</span> server. To help your community liven up and grow while having fun, it also comes with numerous fun <span>utilities</span>, <span>minigames</span> and user <span>interactions</span> for your enjoyment.
+        <span>Apex Sigma</span> was created to connect to as many API endpoints as possible to bring you large amounts of data you might possibly need. <span>Wikipedia</span> articles, <span>reddit</span> posts, funny cat videos from <span>YouTube</span>, tasty <span>recipes</span>, <span>dictionary</span> definition, both official and urban, <span>anime</span> data and loads more. Alongside a plethora of search capabilities, Sigma has intuitive <span>moderation</span> modules to help you organize, optimize, and control, your <span>Discord</span> server. To help your community liven up and grow while having fun, it also comes with numerous fun <span>utilities</span>, <span>minigames</span> and user <span>interactions</span> for your enjoyment.
       </div>
     </section>
 
