@@ -37,7 +37,7 @@
 
 <script>
 import $ from 'jquery'
-import io from '#/socket.io-client/dist/socket.io.js'
+import api from '@/api'
 import Icon from '@/components/Icon'
 import Loader from '@/components/Loader'
 import leaderboard from '@/components/Leaderboard'
@@ -53,14 +53,7 @@ export default {
     }
   },
   mounted () {
-    var socket = io.connect('wss://api.lucia.moe/webs/sigma/stats')
-    // var socket = io.connect('//127.0.0.1:8081/webs/sigma/leaderboard')
     let vuePage = this
-    socket.on('leaderboard_push', function (data) {
-      data = JSON.parse(data)
-      vuePage.data = data.leaderboard
-      $('#loader').hide()
-    })
     let headers = {
       'currency': ['№', 'Name', 'Currency'],
       'experience': ['№', 'Name', 'Experience'],
@@ -71,15 +64,19 @@ export default {
       let what = $(event.target).attr('data-what')
       this.what = what
       this.headers = headers[what]
-      updateLeaderboard(this, socket, what)
+      updateLeaderboard(vuePage, what)
       $(event.target).addClass('is-active')
     })
-    updateLeaderboard(this, socket, 'currency')
+    updateLeaderboard(vuePage, 'currency')
   }
 }
-function updateLeaderboard (ctx, socket, lbType) {
+function updateLeaderboard (ctx, lbType) {
+  ctx.data = []
   $('#loader').show()
-  socket.emit('get_board', {type: lbType})
+  api.get('sigma/leaderboard/' + lbType, (data) => {
+    ctx.data = data.leaderboard
+    $('#loader').hide()
+  })
 }
 </script>
 
