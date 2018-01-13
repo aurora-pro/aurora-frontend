@@ -2,25 +2,27 @@
   <div>
     <loader id="loader"></loader>
     <div class="ui container fadeIn" style="width: auto;">
-      <h1 class="title"><fa icon="fa-terminal"></fa> Commands</h1>
-      <div class="ui styled accordion category animated fadeIn" v-for="category in commands">
-        <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{category.name }}</div>
-        <div class="content commands">
-          <div class="command" v-for="command in category.commands">
-            <h1>{{ command.names.primary }}</h1>
-            <p v-if=command.desc class="description">{{ command.desc }}</p>
-            <p class="usage">Example: <span>{{ command.usage }}</span></p>
-            <p class="aliases" v-if=command.names.alts>
-              Alternative names: <strong>{{ command.names.alts.join(', ') }}</strong>
-            </p>
-            <p class="owner" v-if=command.admin>
-              <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-cogs'></fa> Bot owners</strong>!<br />
-              <span>The bot owner is the person hosting the bot on their machine.<br />
-              This is <strong>not the discord server owner</strong> and <strong>not the person who invited the bot</strong> to the server.<br /></span>
-            </p>
-            <p class="partner" v-if=command.partner>
-              <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-diamond'></fa> Partners</strong>!
-            </p>
+      <div class="ui segment">
+        <h1 class="page-title"><fa icon="fa-terminal"></fa> Commands</h1>
+        <div class="ui styled accordion segment raised category animated fadeIn" v-for="category in commands">
+          <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{category.name }}</div>
+          <div class="content commands">
+            <div class="ui command segment raised" v-for="command in category.commands">
+              <h1>{{ command.names.primary }}</h1>
+              <p v-if=command.desc class="description">{{ command.desc }}</p>
+              <p class="usage">Example: <span>{{ command.usage }}</span></p>
+              <p class="aliases" v-if=command.names.alts>
+                Alternative names: <strong>{{ command.names.alts.join(', ') }}</strong>
+              </p>
+              <p class="owner" v-if=command.admin>
+                <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-cogs'></fa> Bot owners</strong>!<br />
+                <span>The bot owner is the person hosting the bot on their machine.<br />
+                This is <strong>not the discord server owner</strong> and <strong>not the person who invited the bot</strong> to the server.<br /></span>
+              </p>
+              <p class="partner" v-if=command.partner>
+                <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-diamond'></fa> Partners</strong>!
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -120,6 +122,11 @@ export default {
   width: 100%;
   height: calc(100% - 3.5rem);
 }
+.page-title {
+  color: #262626 !important;
+  font-size: 30px;
+  padding-left: 20px;
+}
 .container { margin-top: 4rem; }
 .container h1 { color: white; }
 @media screen and (max-width: 999px), print { .container h1.title { text-align: center; } }
@@ -129,10 +136,10 @@ export default {
   font-size: 1rem; }
 .ui.accordion .content { padding: 0.5em 2.5em 1.5em; }
 .ui.styled.accordion .title { color: rgba(100, 100, 100, 0.9); }
-.ui.styled.accordion .title:hover, .ui.styled.accordion .title.active { color: #1B6F5F  }
+.ui.styled.accordion .title:hover, .ui.styled.accordion .title.active { color: #262626  }
 .command:not(:last-child) { margin-bottom: 2rem; }
 .command h1 { font-size: 1.5rem; }
-.command h1, .aliases strong { color: #1B6F5F !important; }
+.command h1, .aliases strong { color: #262626 !important; }
 .command h1, .command p { margin-bottom: 0.5rem; }
 p.description { white-space: pre-wrap; }
 p.usage { margin-bottom: 0.75rem; }
@@ -147,7 +154,7 @@ p.usage { margin-bottom: 0.75rem; }
 .owner strong { color: #DB0000; }
 .owner span { color: #636c72; }
 .owner span strong { color: #636c72; }
-.header { color: #1B6F5F !important; }
+.header { color: #262626 !important; }
 .ui.accordion .content { padding: 1rem; }
 .ui.accordion .title:not(.ui) {
   background: #fff;
@@ -156,7 +163,7 @@ p.usage { margin-bottom: 0.75rem; }
   font-weight: 700; }
 .ui.accordion .title { color: rgba(99,99,99,.9); }
 .ui.accordion .accordion .title, .ui.accordion .title { transition: background .1s ease,color .1s ease; }
-.ui.accordion .title.active, .ui.accordion .title:hover { color: #1b6f5f; }
+.ui.accordion .title.active, .ui.accordion .title:hover { color: #262626; }
 .ui.cards > .card, .ui.card {
   display: inline-block;
   text-align: initial;

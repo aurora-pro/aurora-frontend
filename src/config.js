@@ -24,7 +24,7 @@ var config = {
   navigation: {
     left: [
     { id: 'ap-landing', href: '/', text: 'Home' },
-    { id: 'sigma-main', href: '/sigma', img: embedImages.logo.navigation }
+    { id: 'sigma-main', href: '/sigma', img: embedImages.logo.navigationMon }
     ],
     conditional: null,
     // Leave IDs empty for non router links
