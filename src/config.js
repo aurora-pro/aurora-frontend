@@ -7,7 +7,8 @@ import NotFound from '@/pages/NotFound'
 import Leaderboards from '@/pages/Leaderboards'
 import Donate from '@/pages/Donate'
 
-var api = 'https://api.lucia.moe/data'
+var api = 'https://api.lucia.moe/rest'
+// var api = 'http://127.0.0.1:8081/rest'
 var routing = [
   { path: '*', meta: { title: 'Lucia\'s Cipher - Not found' }, name: 'ap-notfound', component: NotFound },
   { path: '/', meta: { title: 'Lucia\'s Cipher' }, name: 'ap-landing', component: Landing },

@@ -3,7 +3,7 @@
     <section class="hero fadeIn" >
       <div id="snow">
         <div class="hero-body has-text-centered animated fadeIn">
-          <img class="logo animated fadeIn" src="./../assets/SigmaLightWebFestive.png">
+          <img class="logo animated fadeIn" src="./../assets/logo_sigma_light.png">
           <h1 class="title animated fadeIn">This is <strong>Sigma</strong>, the Database Giant.</h1>
           <h2 class="subtitle animated fadeIn">A bot made to bring knowledge to your Discord server.</h2>
           <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
@@ -33,6 +33,7 @@
 <script>
 import $ from 'jquery'
 import api from '@/api'
+import io from '#/socket.io-client/dist/socket.io.js'
 import Navigation from '@/components/Navigation'
 import Card from '@/components/Card'
 import Fa from '@/components/FaIcon'
@@ -51,21 +52,30 @@ export default {
   },
   components: { Navigation, Card, Fa, Icon, Stat, Loader },
   mounted () {
-    api.get('version', (data) => {
+    api.get('sigma/version', (data) => {
       this.version = data.version
       this.codename = data.codename
     })
-    api.get('stats', (data) => {
-      if (data) {
-        $('#loader').hide()
-        data = data.data.stats
-        this.stats.push({label: 'Active servers', value: data.general.population.guilds, icon: 'server'})
-        this.stats.push({label: 'Active users', value: data.general.population.members, icon: 'users'})
-        this.stats.push({label: 'Commands used', value: data.general.cmd_count, icon: 'terminal'})
-        this.stats.push({label: 'Messages processed', value: data.events.message, icon: 'message-square'})
-        this.stats.push({label: 'Songs Played', value: data.special.songs_played, icon: 'play'})
-      }
-    })
+    updateStats(this)
+    $('#loader').hide()
+  }
+}
+function updateStats (ctx) {
+  var socket = io.connect('//api.lucia.moe/webs/sigma/stats')
+  // var socket = io.connect('//127.0.0.1:8081/webs/sigma/stats')
+  socket.on('sigma_stats', function (data) {
+    data = JSON.parse(data)
+    ctx.stats = []
+    ctx.stats.push({label: 'Active servers', value: data.general.population.guild_count, icon: 'server'})
+    ctx.stats.push({label: 'Active users', value: data.general.population.member_count, icon: 'users'})
+    ctx.stats.push({label: 'Commands used', value: data.general.cmd_count, icon: 'terminal'})
+    ctx.stats.push({label: 'Messages processed', value: data.events.message, icon: 'message-square'})
+    ctx.stats.push({label: 'Songs Played', value: data.special.songs_played, icon: 'play'})
+  })
+  statPush()
+  setInterval(statPush, 1000)
+  function statPush () {
+    socket.emit('get_stats', {stat: 'all'})
   }
 }
 </script>

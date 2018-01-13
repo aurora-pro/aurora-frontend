@@ -67,7 +67,7 @@ export default {
       }
     ]
     let api = this.$root.api
-    $.get(`${api}/commands`, (data) => {
+    $.get(`${api}/sigma/commands`, (data) => {
       // if (data.message == 'Internal Server Error') { error }
       this.commands = data
       $('#loader').hide()

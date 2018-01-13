@@ -24,11 +24,12 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      '#': resolve('node_modules')
       // 'jquery': 'jquery/src/jquery'
     }
   },
   externals: {
-    'jquery': 'jQuery',
+    'jquery': 'jQuery'
     // 'vue': 'Vue',
     // 'vue-router': 'VueRouter'
   },

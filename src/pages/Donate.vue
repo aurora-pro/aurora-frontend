@@ -112,6 +112,7 @@
 
 <script>
   import $ from 'jquery'
+  import api from '@/api'
   import Fa from '@/components/FaIcon'
   import Navigation from '@/components/Navigation'
   import Card from '@/components/Card'
@@ -134,8 +135,7 @@
       Loader
     },
     mounted () {
-      let api = this.$root.api
-      $.get(`${api}/donors`, (data) => {
+      api.get(`sigma/donors`, (data) => {
         $('#loader').hide()
         this.donors = data.donors
       })
