@@ -66,7 +66,7 @@ export default {
 .container {
   width: 100%; }
 .about span {
-  color: #262626;
+  color: #1B6F5F;
   font-weight: 600; }
 
 .credits .credits-container,

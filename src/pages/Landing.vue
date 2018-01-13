@@ -60,7 +60,7 @@ export default {
 .logo { max-width: 400px; }
 .tile { margin: 10px auto;
   max-width: 700px;
-  color: #c865a2;
+  color: #1B6F5F;
   border-radius: 3px;
   background: unset;
   background-size: cover;

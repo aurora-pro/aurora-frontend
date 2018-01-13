@@ -3,9 +3,9 @@
     <section class="hero fadeIn" >
       <div id="snow">
         <div class="hero-body has-text-centered animated fadeIn">
-          <img class="logo animated fadeIn" src="./../assets/logo_sigma_light_g.png">
-          <h1 class="title animated fadeIn">This is <strong>Si͇g̹͎̥̗͈̙̠ṃ̠a̲͙̣͖̟</strong>?, the Database Giant.</h1>
-          <h2 class="subtitle animated fadeIn">A bot made to bring PIERCING C҉ǪLORS to your Discord server.</h2>
+          <img class="logo animated fadeIn" src="./../assets/logo_sigma_light.png">
+          <h1 class="title animated fadeIn">This is <strong>Sigma</strong>, the Database Giant.</h1>
+          <h2 class="subtitle animated fadeIn">A bot made to bring knowledge to your Discord server.</h2>
           <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
           <br />
           <div class="version">
@@ -57,10 +57,10 @@ export default {
     })
     api.get('sigma/stats', (data) => {
       $('#loader').hide()
-      this.stats.push({label: 'Active Servers', value: data.general.population.guild_count, icon: 'server'})
-      this.stats.push({label: 'Active Users', value: data.general.population.member_count, icon: 'users'})
-      this.stats.push({label: 'Commands Used', value: data.general.cmd_count, icon: 'terminal'})
-      this.stats.push({label: 'Messages Processed', value: data.events.message, icon: 'message-square'})
+      this.stats.push({label: 'Active servers', value: data.general.population.guild_count, icon: 'server'})
+      this.stats.push({label: 'Active users', value: data.general.population.member_count, icon: 'users'})
+      this.stats.push({label: 'Commands used', value: data.general.cmd_count, icon: 'terminal'})
+      this.stats.push({label: 'Messages processed', value: data.events.message, icon: 'message-square'})
       this.stats.push({label: 'Songs Played', value: data.special.songs_played, icon: 'play'})
     })
   }
@@ -77,7 +77,7 @@ export default {
 .hero .title, .hero .subtitle {
   color: #fff; }
 .tag.is-white {
-   color: #262626; }
+   color: #1B6F5F; }
 .version {
   margin-top: 1em; min-height: 1.68em; }
 .version span {
@@ -90,8 +90,5 @@ export default {
 @media screen and (max-width: 911px), print {
   .columns:not(.is-desktop) {
     display: block; }
-}
-.footer {
-  background-color: #fff;
 }
 </style>

@@ -92,7 +92,7 @@ function updateLeaderboard (ctx, lbType) {
 	margin-bottom: 0; }
 /* Tab switcher */
 .switch .tabs .nav-item.is-active {
-  border-bottom: 3px solid #262626;
+  border-bottom: 3px solid #18AA8D;
   padding-bottom: calc(0.5rem - 3px);
 }
 #loader {

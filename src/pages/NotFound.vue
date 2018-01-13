@@ -37,8 +37,7 @@
 export default {
   name: 'ap-notfound',
   data () {
-    // var roll = Math.floor((Math.random() * 2) + 0)
-    var roll = 0
+    var roll = Math.floor((Math.random() * 2) + 0)
     var data = null
     console.log(roll)
     if (roll === 0) {

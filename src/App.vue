@@ -72,9 +72,8 @@ body, button, input, select, textarea, .ui, [class*="tooltip--"]::after {
   background-size: cover;
   background-attachment: fixed; }
 /* Backdrop colors */
-.light { background-image: url("assets/monika_bg_g_d.png"); }
-/* .dark { background-image: linear-gradient(160deg, #1c816c, #165b4d 50%, #0b372f 75%); } */
-.dark { background-image: url("assets/menu_bg_d.png"); }
+.light { background-image: linear-gradient(160deg, #18ae90, #16826c 50%, #145246 75%); }
+.dark { background-image: linear-gradient(160deg, #1c816c, #165b4d 50%, #0b372f 75%); }
 .view {
   flex: 1;
   margin-top: 3rem; }
@@ -84,13 +83,13 @@ body, button, input, select, textarea, .ui, [class*="tooltip--"]::after {
 /* Style the buttons */
 a.button {
   transition: all .15s ease-in-out;
-  color: #262626;
+  color: #1B6F5F;
   border-color: #FFF; }
 a.button:focus,
 a.button:hover {
   color: #FFF;
-  background-color: #262626;
-  border-color: #262626; }
+  background-color: #1ABC9C;
+  border-color: #1ABC9C; }
 
 /* Webkit scroller */
 ::-webkit-scrollbar {

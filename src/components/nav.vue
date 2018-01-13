@@ -94,7 +94,7 @@ export default {
   left: 0;
   bottom: -2px;
   padding-bottom: 2px;
-  background-color: #c865a2; }
+  background-image: linear-gradient(160deg,#18AA8D 0% ,#17947B 100%); }
 .nav-left, .nav-right { overflow: hidden; }  /* Hide scrollbars that appear due to wrapping navigation items into spans */
 .nav-toggle { height: auto; }
 .nav a.nav-item { outline: none; }
@@ -117,7 +117,7 @@ export default {
   position: absolute;
   z-index: -1;
   bottom: 0;
-  background: linear-gradient(160deg,#c865a2 0% ,#c865a2 100%);
+  background: linear-gradient(160deg,#18AA8D 0% ,#17947B 100%);
   height: 2px; }
 .hoverline:before {
   left: 50%;
