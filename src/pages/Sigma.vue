@@ -3,7 +3,7 @@
     <section class="hero fadeIn" >
       <div id="snow">
         <div class="hero-body has-text-centered animated fadeIn">
-          <img id="sigma-logo" class="logo animated fadeIn" src="./../assets/logo_sigma_light.png">
+          <img id="sigma-logo" height="390px" class="logo animated fadeIn" src="./../assets/logo_sigma_light.png">
           <h1 class="title animated fadeIn">This is <strong id="sigma-name">Sigma</strong>, the Database Giant.</h1>
           <h2 class="subtitle animated fadeIn">A bot made to bring knowledge to your Discord server.</h2>
           <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
@@ -63,12 +63,16 @@ export default {
       this.stats.push({label: 'Messages processed', value: data.events.message, icon: 'message-square'})
       this.stats.push({label: 'Songs Played', value: data.special.songs_played, icon: 'play'})
     })
-    setInterval(glitcher, 100)
-    setInterval(imageGlitcher, 150)
+    setInterval(glitcher, 200)
+    setInterval(imageGlitcher, 200)
   }
 }
 function glitcher () {
+  var txtRoll = Math.floor(Math.random() * 10)
   var txt = 'Sigma'
+  if (txtRoll === 0) {
+    txt = 'Monika'
+  }
   var glitchText = ''
   var unicodes = [
     '\u0315', '\u031b', '\u0340', '\u0341',
@@ -107,7 +111,18 @@ function imageGlitcher () {
     'https://i.imgur.com/AP3ZAtW.png',
     'https://i.imgur.com/ih3P3Wa.png'
   ]
-  var allArrays = [normalImg, glitchImages]
+  var monikaImages = [
+    'https://i.imgur.com/wJazxfj.png',
+    'https://i.imgur.com/6qqfqC7.png',
+    'https://i.imgur.com/eKYJ6QO.png'
+  ]
+  var allArrays = [
+    normalImg, normalImg, normalImg, normalImg, normalImg,
+    normalImg, normalImg, normalImg, normalImg, normalImg,
+    glitchImages, glitchImages, glitchImages, glitchImages,
+    glitchImages, glitchImages, glitchImages, glitchImages,
+    monikaImages
+  ]
   var imgArray = allArrays[Math.floor(Math.random() * allArrays.length)]
   var imgChoice = imgArray[Math.floor(Math.random() * imgArray.length)]
   $('#sigma-logo').attr('src', imgChoice)
