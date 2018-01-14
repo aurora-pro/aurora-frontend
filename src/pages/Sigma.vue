@@ -64,29 +64,53 @@ export default {
       this.stats.push({label: 'Songs Played', value: data.special.songs_played, icon: 'play'})
     })
     setInterval(glitcher, 100)
-    setInterval(imageGlitcher, 100)
-    setInterval(unglitch, 250)
-    setInterval(imageUnglitch, 250)
+    setInterval(imageGlitcher, 150)
   }
 }
 function glitcher () {
-  var glitches = [
-    'S̡iģm̸a͏', 'Si̵gm̢a', 'S̨i͢g͡m̶a͝',
-    'S̢̛íg̷m̸̡a͏͟͜', 'Sig͏ma̧̕͢', 'S̢͜i̷̶̧g͟m̀͟͝a͠',
-    'Ş̀͝͞i̴̢͟͞͡ǵ̢̕͢͡m̴̸͝͝ą̷͝', 'S̷̀i̡͘͢ģm̡̀a̢', 'S̀͘͟͏i̵̢͜g̀͟͏m̨̧͝à̶̸͘̕',
-    'Si̸gm͟a͞', 'S̢ìg͘͡m͝͏a̢͟͝', 'S̀͡ì͟g̨̨͝͠m҉̀a̧͘͜͏̵'
+  var txt = 'Sigma'
+  var glitchText = ''
+  var unicodes = [
+    '\u0315', '\u031b', '\u0340', '\u0341',
+    '\u0358', '\u0321', '\u0322', '\u0327',
+    '\u0328', '\u0334', '\u0335', '\u0336',
+    '\u034f', '\u035c', '\u035d', '\u035e',
+    '\u035f', '\u0360', '\u0362', '\u0338',
+    '\u0337', '\u0361', '\u0489'
   ]
-  var glitchText = glitches[Math.floor(Math.random() * glitches.length)]
+  function isGlitch (c) {
+    var i
+    for (i = 0; i < unicodes.length; i++) {
+      if (c === unicodes[i]) {
+        return true
+      }
+      return false
+    }
+  }
+  for (var i = 0; i < txt.length; i++) {
+    if (isGlitch(txt.substr(i, 1))) {
+      continue
+    }
+    glitchText += txt.substr(i, 1)
+    var numMid = Math.floor(Math.random() * 4)
+    for (var j = 0; j < numMid; j++) {
+      glitchText += unicodes[Math.floor(Math.random() * unicodes.length)]
+    }
+  }
   $('#sigma-name').text(glitchText)
 }
 function imageGlitcher () {
-  $('#sigma-logo').attr('src', 'https://i.imgur.com/B3FHWir.png')
-}
-function unglitch () {
-  $('#sigma-name').text('Sigma')
-}
-function imageUnglitch () {
-  $('#sigma-logo').attr('src', 'https://i.imgur.com/62GdgTa.png')
+  var normalImg = ['https://i.imgur.com/B3FHWir.png']
+  var glitchImages = [
+    'https://i.imgur.com/62GdgTa.png',
+    'https://i.imgur.com/SEsGUSj.png',
+    'https://i.imgur.com/AP3ZAtW.png',
+    'https://i.imgur.com/ih3P3Wa.png'
+  ]
+  var allArrays = [normalImg, glitchImages]
+  var imgArray = allArrays[Math.floor(Math.random() * allArrays.length)]
+  var imgChoice = imgArray[Math.floor(Math.random() * imgArray.length)]
+  $('#sigma-logo').attr('src', imgChoice)
 }
 </script>
 
