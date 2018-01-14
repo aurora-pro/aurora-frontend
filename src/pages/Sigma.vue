@@ -3,8 +3,8 @@
     <section class="hero fadeIn" >
       <div id="snow">
         <div class="hero-body has-text-centered animated fadeIn">
-          <img class="logo animated fadeIn" src="./../assets/logo_sigma_light.png">
-          <h1 class="title animated fadeIn">This is <strong>Sigma</strong>, the Database Giant.</h1>
+          <img id="sigma-logo" class="logo animated fadeIn" src="./../assets/logo_sigma_light.png">
+          <h1 class="title animated fadeIn">This is <strong id="sigma-name">Sigma</strong>, the Database Giant.</h1>
           <h2 class="subtitle animated fadeIn">A bot made to bring knowledge to your Discord server.</h2>
           <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
           <br />
@@ -63,7 +63,30 @@ export default {
       this.stats.push({label: 'Messages processed', value: data.events.message, icon: 'message-square'})
       this.stats.push({label: 'Songs Played', value: data.special.songs_played, icon: 'play'})
     })
+    setInterval(glitcher, 100)
+    setInterval(imageGlitcher, 100)
+    setInterval(unglitch, 250)
+    setInterval(imageUnglitch, 250)
   }
+}
+function glitcher () {
+  var glitches = [
+    'S̡iģm̸a͏', 'Si̵gm̢a', 'S̨i͢g͡m̶a͝',
+    'S̢̛íg̷m̸̡a͏͟͜', 'Sig͏ma̧̕͢', 'S̢͜i̷̶̧g͟m̀͟͝a͠',
+    'Ş̀͝͞i̴̢͟͞͡ǵ̢̕͢͡m̴̸͝͝ą̷͝', 'S̷̀i̡͘͢ģm̡̀a̢', 'S̀͘͟͏i̵̢͜g̀͟͏m̨̧͝à̶̸͘̕',
+    'Si̸gm͟a͞', 'S̢ìg͘͡m͝͏a̢͟͝', 'S̀͡ì͟g̨̨͝͠m҉̀a̧͘͜͏̵'
+  ]
+  var glitchText = glitches[Math.floor(Math.random() * glitches.length)]
+  $('#sigma-name').text(glitchText)
+}
+function imageGlitcher () {
+  $('#sigma-logo').attr('src', 'https://i.imgur.com/B3FHWir.png')
+}
+function unglitch () {
+  $('#sigma-name').text('Sigma')
+}
+function imageUnglitch () {
+  $('#sigma-logo').attr('src', 'https://i.imgur.com/62GdgTa.png')
 }
 </script>
 
