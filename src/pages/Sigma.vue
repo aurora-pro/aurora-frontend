@@ -9,8 +9,8 @@
           <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
           <br />
           <div class="version">
-            <span class="tag is-white animated fadeIn" v-if=version>Version {{ `${version.major}.${version.minor}.${version.patch}` }}</span>
-            <span class="tag is-white animated fadeIn" v-if=codename>Codename {{ codename }}</span>
+            <span id="sigma-version" class="tag is-white animated fadeIn" v-if=version>Version {{ `${version.major}.${version.minor}.${version.patch}` }}</span>
+            <span id="sigma-codename" class="tag is-white animated fadeIn" v-if=codename>Codename {{ codename }}</span>
           </div>
         </div>
       </div>
@@ -67,12 +67,7 @@ export default {
     setInterval(imageGlitcher, 200)
   }
 }
-function glitcher () {
-  var txtRoll = Math.floor(Math.random() * 10)
-  var txt = 'Sigma'
-  if (txtRoll === 0) {
-    txt = 'Monika'
-  }
+function glitchify (txt) {
   var glitchText = ''
   var unicodes = [
     '\u0315', '\u031b', '\u0340', '\u0341',
@@ -101,7 +96,18 @@ function glitcher () {
       glitchText += unicodes[Math.floor(Math.random() * unicodes.length)]
     }
   }
+  return glitchText
+}
+function glitcher () {
+  var txtRoll = Math.floor(Math.random() * 10)
+  var txt = 'Sigma'
+  if (txtRoll === 0) {
+    txt = 'Monika'
+  }
+  var glitchText = glitchify(txt)
+  var glitchCodeName = glitchify('Monika')
   $('#sigma-name').text(glitchText)
+  $('#sigma-codename').text('Codename ' + glitchCodeName)
 }
 function imageGlitcher () {
   var normalImg = ['https://i.imgur.com/B3FHWir.png']
@@ -116,14 +122,13 @@ function imageGlitcher () {
     'https://i.imgur.com/6qqfqC7.png',
     'https://i.imgur.com/eKYJ6QO.png'
   ]
-  var allArrays = [
-    normalImg, normalImg, normalImg, normalImg, normalImg,
-    normalImg, normalImg, normalImg, normalImg, normalImg,
-    glitchImages, glitchImages, glitchImages, glitchImages,
-    glitchImages, glitchImages, glitchImages, glitchImages,
-    monikaImages
-  ]
-  var imgArray = allArrays[Math.floor(Math.random() * allArrays.length)]
+  var imgArrayRoll = Math.floor(Math.random() * 10)
+  var imgArray = normalImg
+  if (imgArrayRoll === 0) {
+    imgArray = monikaImages
+  } else if (imgArrayRoll <= 5) {
+    imgArray = glitchImages
+  }
   var imgChoice = imgArray[Math.floor(Math.random() * imgArray.length)]
   $('#sigma-logo').attr('src', imgChoice)
 }
