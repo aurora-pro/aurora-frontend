@@ -3,7 +3,7 @@
     <section class="hero fadeIn" >
       <div id="snow">
         <div class="hero-body has-text-centered animated fadeIn">
-          <img id="sigma-logo" height="390px" class="logo animated fadeIn" src="https://i.imgur.com/ih3P3Wa.png">
+          <img id="sigma-logo" height="390px" class="logo animated fadeIn" src="./../assets/logo_sigma_light.png">
           <h1 class="title animated fadeIn">This is <strong id="sigma-name">Sigma</strong>, the Database Giant.</h1>
           <h2 class="subtitle animated fadeIn">A bot made to bring knowledge to your Discord server.</h2>
           <a class="button animated fadeIn" :href=links.invite target="_blank">Add to Discord</a>
