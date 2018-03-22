@@ -1,12 +1,12 @@
 <template>
-  <nav class="nav" v-show=active>
+  <nav class="nav" v-show="active">
     <div class="nav-left">
       <span v-for="link in navmenu.left">
-        <router-link v-if=link.img class="nav-item hoverline logo" :key=link.id :to=link.href><img :src=link.img></router-link>
-        <router-link v-else class="nav-item hoverline" :key=link.id :to=link.href>{{ link.text }}</router-link>
+        <router-link v-if=link.img class="nav-item hoverline logo" :key="link.id" :to="link.href"><img :src="link.img"></router-link>
+        <router-link v-else class="nav-item hoverline" :key="link.id" :to="link.href">{{ link.text }}</router-link>
       </span>
       <span v-for="link in navmenu.conditional">
-        <a class="nav-item hoverline" :class=link.class :style=link.style v-on:click=link.method>{{ link.text }}</a>
+        <a class="nav-item hoverline" :class="link.class" :style="link.style" v-on:click="link.method">{{ link.text }}</a>
       </span>
     </div>
 
@@ -21,8 +21,8 @@
     <!-- This "nav-menu" is hidden on mobile -->
     <div class="nav-right nav-menu">
       <span v-for="link in navmenu.right">
-        <router-link v-if=link.id class="nav-item hoverline" :key=link.id :to=link.href>{{ link.text }}</router-link>
-        <a v-else class="nav-item hoverline" target="_blank" :href=link.href>{{ link.text }}</a>
+        <router-link v-if=link.id class="nav-item hoverline" :key="link.id" :to="link.href">{{ link.text }}</router-link>
+        <a v-else class="nav-item hoverline" target="_blank" :href="link.href">{{ link.text }}</a>
       </span>
     </div>
   </nav>
