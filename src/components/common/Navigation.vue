@@ -2,7 +2,7 @@
   <nav class="nav">
     <div class="nav-left">
       <a class="nav-item hoverline logo" href="/#">
-        <img src="./../assets/images/logo_sigma.png" alt="">
+        <img src="./../../assets/images/logo_sigma.png" alt="">
       </a>
       <a class="nav-item hoverline" href="/#sigma">Home</a>
       <a v-for="item in navmenu.left" class="nav-item hoverline" :class=item.class :style=item.style v-on:click=item.method>{{ item.text }}</a>

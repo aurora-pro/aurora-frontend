@@ -10,8 +10,8 @@
 </template>
 
 <script>
-  import Fa from '@/components/FaIcon'
-  import Icon from '@/components/Icon'
+  import Fa from '@/components/common/FaIcon'
+  import Icon from '@/components/common/Icon'
   export default {
     name: 'stat',
     props: ['label', 'value', 'icon'],

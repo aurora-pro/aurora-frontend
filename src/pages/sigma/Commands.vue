@@ -33,10 +33,10 @@
 <script>
 import $ from 'jquery'
 import './../../../node_modules/semantic-ui-css/components/accordion.js'
-import Navigation from '@/components/Navigation'
-import Fa from '@/components/FaIcon'
-import Icon from '@/components/Icon'
-import Loader from '@/components/Loader'
+import Navigation from '@/components/common/Navigation'
+import Fa from '@/components/common/FaIcon'
+import Icon from '@/components/common/Icon'
+import Loader from '@/components/common/Loader'
 export default {
   name: 'Sigma-commands',
   data () {

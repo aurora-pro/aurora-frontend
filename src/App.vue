@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import navigation from '@/components/nav'
-  import tail from '@/components/Footer'
+  import navigation from '@/components/common/Nav'
+  import tail from '@/components/common/Footer'
   export default {
     name: 'app',
     components: {

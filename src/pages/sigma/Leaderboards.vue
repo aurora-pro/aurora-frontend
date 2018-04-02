@@ -38,9 +38,9 @@
 <script>
 import $ from 'jquery'
 import api from '@/api'
-import Icon from '@/components/Icon'
-import Loader from '@/components/Loader'
-import leaderboard from '@/components/Leaderboard'
+import Icon from '@/components/common/Icon'
+import Loader from '@/components/common/Loader'
+import leaderboard from '@/components/sigma/Leaderboard'
 
 export default {
   name: 'sigma-leaderboards',

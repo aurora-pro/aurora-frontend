@@ -33,12 +33,12 @@
 <script>
 import $ from 'jquery'
 import api from '@/api'
-import Navigation from '@/components/Navigation'
-import Card from '@/components/Card'
-import Fa from '@/components/FaIcon'
-import Icon from '@/components/Icon'
-import Stat from '@/components/Stat'
-import Loader from '@/components/Loader'
+import Navigation from '@/components/common/Navigation'
+import Card from '@/components/sigma/Card'
+import Fa from '@/components/common/FaIcon'
+import Icon from '@/components/common/Icon'
+import Stat from '@/components/sigma/Stat'
+import Loader from '@/components/common/Loader'
 export default {
   name: 'sigma',
   data () {

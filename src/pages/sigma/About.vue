@@ -43,11 +43,11 @@
 </template>
 
 <script>
-import Navigation from '@/components/Navigation'
-import Card from '@/components/Card'
-import Icon from '@/components/Icon'
-import Ribbon from '@/components/Ribbon'
-import Loader from '@/components/Loader'
+import Navigation from '@/components/common/Navigation'
+import Card from '@/components/sigma/Card'
+import Icon from '@/components/common/Icon'
+import Ribbon from '@/components/sigma/Ribbon'
+import Loader from '@/components/common/Loader'
 
 export default {
   name: 'sigma',
