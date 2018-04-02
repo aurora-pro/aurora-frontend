@@ -1,22 +1,22 @@
-import embedImages from '@/assets/embedImages'
-import Landing from '@/pages/Landing'
-import Sigma from '@/pages/Sigma'
-import Commands from '@/pages/Commands'
-import About from '@/pages/About'
-import NotFound from '@/pages/NotFound'
-import Leaderboards from '@/pages/Leaderboards'
-import Donate from '@/pages/Donate'
+import embedImages from '@/assets/scripts/embedImages'
+import Landing from '@/pages/common/Landing'
+import Sigma from '@/pages/sigma/Sigma'
+import Commands from '@/pages/sigma/Commands'
+import About from '@/pages/sigma/About'
+import NotFound from '@/pages/common/NotFound'
+import Leaderboards from '@/pages/sigma/Leaderboards'
+import Donate from '@/pages/sigma/Donate'
 
 var api = 'https://api.lucia.moe/rest'
 // var api = 'http://127.0.0.1:8081/rest'
 var routing = [
   { path: '*', meta: { title: 'Lucia\'s Cipher - Not found' }, name: 'ap-notfound', component: NotFound },
   { path: '/', meta: { title: 'Lucia\'s Cipher' }, name: 'ap-landing', component: Landing },
-  { path: '/sigma', meta: { title: 'Sigma: The Database Giant' }, name: 'sigma', component: Sigma },
-  { path: '/sigma/commands', meta: { title: 'Sigma: Commands' }, name: 'sigma-commands', component: Commands },
-  { path: '/sigma/about', meta: { title: 'Sigma: About' }, name: 'sigma-about', component: About },
-  { path: '/sigma/leaderboards', meta: { title: 'Sigma: Leaderboards' }, name: 'sigma-leaderboards', component: Leaderboards },
-  { path: '/sigma/donate', meta: { title: 'Sigma: Donations' }, name: 'sigma-donation', component: Donate }
+  { path: '/sigma', meta: { title: 'Lucia\'s Cipher - Sigma: The Database Giant' }, name: 'sigma', component: Sigma },
+  { path: '/sigma/commands', meta: { title: 'Lucia\'s Cipher - Sigma Commands' }, name: 'sigma-commands', component: Commands },
+  { path: '/sigma/about', meta: { title: 'Lucia\'s Cipher - Sigma Information' }, name: 'sigma-about', component: About },
+  { path: '/sigma/leaderboards', meta: { title: 'Lucia\'s Cipher - Sigma Leaderboards' }, name: 'sigma-leaderboards', component: Leaderboards },
+  { path: '/sigma/donate', meta: { title: 'Lucia\'s Cipher - Sigma Donation Information' }, name: 'sigma-donation', component: Donate }
 ]
 var config = {
   api: api,

@@ -1,7 +1,7 @@
-import './assets/animate_custom.sass'
-import './assets/semantic_custom.sass'
-import './assets/bulma_custom.sass'
-import './assets/custom_icons.sass'
+import './assets/styles/animate_custom.sass'
+import './assets/styles/semantic_custom.sass'
+import './assets/styles/bulma_custom.sass'
+import './assets/styles/custom_icons.sass'
 import './../node_modules/semantic-ui-css/components/accordion.js'
 
 import Vue from 'vue'

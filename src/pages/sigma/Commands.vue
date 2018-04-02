@@ -32,7 +32,7 @@
 
 <script>
 import $ from 'jquery'
-import './../../node_modules/semantic-ui-css/components/accordion.js'
+import './../../../node_modules/semantic-ui-css/components/accordion.js'
 import Navigation from '@/components/Navigation'
 import Fa from '@/components/FaIcon'
 import Icon from '@/components/Icon'

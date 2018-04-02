@@ -51,15 +51,15 @@ export default {
   filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
   background-size: 20px;
 }
-.python { background-image: url("./../assets/AlexUserIcon.png"); }
-.js { background-image: url("./../assets/AwakUserIcon.png");}
-.ruby { background-image: url("./../assets/ValebuUserIcon.png"); }
+.python { background-image: url("./../assets/images/python_icon.png"); }
+.js { background-image: url("./../assets/images/javascript_icon.png");}
+.ruby { background-image: url("./../assets/images/ruby_icon.png"); }
 .hypesquad {
   width: 42px;
   height: 29px;
   margin-top: -2px;
   text-align: center;
-  background-image: url('./../assets/hypesquad.svg'); }
+  background-image: url('./../assets/images/hypesquad.svg'); }
 .hypesquad::after {
   width: 205px;
   font-size: 0.85rem;
