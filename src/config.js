@@ -23,27 +23,27 @@ var config = {
   store: null,
   navigation: {
     left: [
-    { id: 'ap-landing', href: '/', text: 'Home' },
-    { id: 'sigma-main', href: '/sigma', img: embedImages.logo.navigation }
+      { id: 'ap-landing', href: '/', text: 'Home' },
+      { id: 'sigma-main', href: '/sigma', img: embedImages.logo.navigation }
     ],
     conditional: null,
     // Leave IDs empty for non router links
     right: [
-    { id: 'sigma-about', href: '/sigma/about', text: 'About' },
-    { id: 'sigma-donate', href: '/sigma/donate', text: 'Donate' },
-    { id: 'sigma-commands', href: '/sigma/commands', text: 'Commands' },
-    { id: 'sigma-leaderboards', href: '/sigma/leaderboards', text: 'Leaderboards' },
-    { id: '', href: 'https://github.com/lu-ci', text: 'Github', icon: 'gh' },
-    { id: '', href: 'https://discordapp.com/invite/aEUCHwX', text: 'Discord', icon: 'discord' }
+      { id: 'sigma-about', href: '/sigma/about', text: 'About' },
+      { id: 'sigma-donate', href: '/sigma/donate', text: 'Donate' },
+      { id: 'sigma-commands', href: '/sigma/commands', text: 'Commands' },
+      { id: 'sigma-leaderboards', href: '/sigma/leaderboards', text: 'Leaderboards' },
+      { id: '', href: 'https://github.com/lu-ci/apex-sigma-core', text: 'Github', icon: 'gh' },
+      { id: '', href: 'https://discordapp.com/invite/aEUCHwX', text: 'Discord', icon: 'discord' }
     ]
   },
   pages: {
     landing: {
       projects: [
-        {id: 'sigma', title: 'Apex Sigma', description: 'A bot made to bring knowledge to your discord server.', target: '/#sigma'},
-        {id: 'bdlinestickers', title: 'BetterDiscord LINE Stickers', description: 'A BetterDiscord plugin to add LINE stickers to the emote menu.', target: 'https://github.com/awaken1ng/bd-linestickers'},
-        {id: 'wkbreezedark', title: 'WaniKani Breeze Dark', description: 'A dark Stylish theme for WaniKani based on KDE Breeze.', target: 'https://github.com/valeth/wanikani-breeze-dark'},
-        {id: 'kyanitecoll', title: 'Kyanite Collector', description: 'The expandable, modular, art gallery collector.', target: 'https://github.com/lu-ci/kyanite-collector'}
+        {id: 'sigma', title: 'Apex Sigma', description: 'A bot made to bring knowledge to your discord server.', target: '/#/sigma'},
+        {id: 'bdlinestickers', title: 'BetterDiscord LINE Stickers', description: 'A BetterDiscord plugin to add LINE stickers to the emote menu.', target: '/#/bdline'},
+        {id: 'wkbreezedark', title: 'WaniKani Breeze Dark', description: 'A dark Stylish theme for WaniKani based on KDE Breeze.', target: '/#/wkbreeze'},
+        {id: 'kyanitecoll', title: 'Kyanite Collector', description: 'The expandable, modular, art gallery collector.', target: '/#/kyanite'}
       ],
       others: null
     },

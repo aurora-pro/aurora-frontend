@@ -33,8 +33,7 @@
     },
     data () {
       return {
-        projects: this.$root.pages.landing.projects,
-        other: this.$root.pages.landing.others
+        projects: this.$root.pages.landing.projects
       }
     }
   }
