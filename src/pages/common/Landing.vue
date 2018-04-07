@@ -75,17 +75,13 @@ export default {
   box-shadow: 0 0 20px rgba(0,0,0,0.75); 
   cursor: pointer; 
 } 
-.tile.sigma,
-.tile.bdlinestickers,
-.tile.wkbreezedark,
-.tile.kyanitecoll {
-  background: #fff;
-}
+.tile { background: #fff; }
 .tile.sigma:hover { color: #450099; } 
 .tile.hastebin:hover { color: #2980B9; } 
 .tile.bdlinestickers:hover { color: #00b84f; } 
 .tile.wkbreezedark:hover { color: #D35400; } 
-.tile.kyanitecoll:hover { color: #0066ff; } 
+.tile.kyanitecoll:hover { color: #0066ff; }
+.tile.discordrpc:hover { color: #6b3900; }
 @media screen and (max-width: 500px), print { .logo {max-width: 300px; } } 
 @media screen and (max-width: 400px), print { .logo {max-width: 200px; } } 
 @media screen and (max-width: 936px), print { .columns { display: block !important; } } 
