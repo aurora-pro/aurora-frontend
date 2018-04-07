@@ -42,8 +42,9 @@ var config = {
       projects: [
         {id: 'sigma', title: 'Apex Sigma', description: 'A bot made to bring knowledge to your discord server.', target: '/#/sigma'},
         {id: 'bdlinestickers', title: 'BetterDiscord LINE Stickers', description: 'A BetterDiscord plugin to add LINE stickers to the emote menu.', target: 'https://github.com/awaken1ng/bd-linestickers'},
-        {id: 'wkbreezedark', title: 'WaniKani Breeze Dark', description: 'A dark Stylish theme for WaniKani based on KDE Breeze.', target: 'https://github.com/valeth/wanikani-breeze-dark'},
-        {id: 'kyanitecoll', title: 'Kyanite Collector', description: 'The expandable, modular, art gallery collector.', target: 'https://github.com/lu-ci/kyanite-collector'}
+        {id: 'wkbreezedark', title: 'WaniKani Breeze Dark', description: 'A dark Stylish theme for WaniKani based on KDE Breeze.', target: 'https://gitlab.com/valeth/wanikani-breeze-dark'},
+        {id: 'kyanitecoll', title: 'Kyanite Collector', description: 'The expandable, modular, art gallery collector.', target: 'https://github.com/lu-ci/kyanite-collector'},
+        {id: 'discordrpc', title: 'Discord RPC Client', description: 'An RPC client library for Discord rich presence connections.', target: 'https://gitlab.com/valeth/discord-rpc-client.rs'}
       ],
       others: null
     },
