@@ -65,11 +65,11 @@
   text-align: left;
   padding-left: 4px;
   background-color: #1B6F5F !important;
-  text-align: right !important;
 }
 .label {
   font-weight: unset !important;
   text-transform: capitalize;
+  text-align: right !important;
 }
 .level-title {
   display: inline;
