@@ -6,17 +6,19 @@ import About from '@/pages/sigma/About'
 import NotFound from '@/pages/common/NotFound'
 import Leaderboards from '@/pages/sigma/Leaderboards'
 import Donate from '@/pages/sigma/Donate'
+import Status from '@/pages/common/Status'
 
 var api = 'https://api.lucia.moe/rest'
 // var api = 'http://127.0.0.1:8081/rest'
 var routing = [
-  { path: '*', meta: { title: 'Lucia\'s Cipher - Not found' }, name: 'ap-notfound', component: NotFound },
-  { path: '/', meta: { title: 'Lucia\'s Cipher' }, name: 'ap-landing', component: Landing },
+  { path: '*', meta: { title: 'Lucia\'s Cipher - Not found' }, name: 'lc-notfound', component: NotFound },
+  { path: '/', meta: { title: 'Lucia\'s Cipher' }, name: 'lc-landing', component: Landing },
   { path: '/sigma', meta: { title: 'Lucia\'s Cipher - Sigma: The Database Giant' }, name: 'sigma', component: Sigma },
   { path: '/sigma/commands', meta: { title: 'Lucia\'s Cipher - Sigma Commands' }, name: 'sigma-commands', component: Commands },
   { path: '/sigma/about', meta: { title: 'Lucia\'s Cipher - Sigma Information' }, name: 'sigma-about', component: About },
   { path: '/sigma/leaderboards', meta: { title: 'Lucia\'s Cipher - Sigma Leaderboards' }, name: 'sigma-leaderboards', component: Leaderboards },
-  { path: '/sigma/donate', meta: { title: 'Lucia\'s Cipher - Sigma Donation Information' }, name: 'sigma-donation', component: Donate }
+  { path: '/sigma/donate', meta: { title: 'Lucia\'s Cipher - Sigma Donation Information' }, name: 'sigma-donation', component: Donate },
+  { path: '/status', meta: { title: 'Lucia\'s Cipher - Service Status' }, name: 'lc-status', component: Status }
 ]
 var config = {
   api: api,

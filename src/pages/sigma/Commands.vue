@@ -4,10 +4,10 @@
     <div class="ui container fadeIn" style="width: auto;">
       <div class="ui segment">
         <h1 class="title"><fa icon="fa-terminal"></fa> Commands</h1> 
-        <div class="ui styled accordion category segment animated fadeIn" v-for="category in commands"> 
-          <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{category.name }}</div> 
+        <div class="ui styled accordion category segment animated fadeIn" v-for="category in commands" v-bind:key="category.name"> 
+          <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{ category.name }}</div> 
           <div class="content commands"> 
-            <div class="command" v-for="command in category.commands"> 
+            <div class="command" v-for="command in category.commands" v-bind:key="command.name"> 
               <h1>{{ command.names.primary }}</h1> 
               <p v-if=command.desc class="description">{{ command.desc }}</p> 
               <p class="usage">Example: <span>{{ command.usage }}</span></p> 
