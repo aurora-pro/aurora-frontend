@@ -1,5 +1,5 @@
 <template>
-  <table class="table">
+  <table class="ui table">
     <thead>
       <tr>
         <th v-for="header in headers" v-bind:key="header">{{ header }}</th>
@@ -18,7 +18,14 @@
             </div>
           </div>
         </td>
-        <td>{{row.value}}</td>
+        <td>
+          <span class="ui header level-title">Level {{row.level.curr}} {{row.title.name}}</span>
+          <div class="ui small progress" :data-percent=row.level.next_perc>
+            <div class="bar" v-bind:style="{width: row.level.next_perc + '%' }">{{row.level.next_perc}}%</div>
+            <div v-if="what === 'currency'" class="label">{{row.value}} Kud</div>
+            <div v-else class="label">{{row.value}} {{what}}</div>
+          </div>
+        </td>
       </tr>
     </tbody>
     <tbody v-else>
@@ -52,6 +59,19 @@
 .user {
   display: flex;
   align-items: center;
+}
+.bar {
+  color: #ffffff;
+  text-align: left;
+  padding-left: 4px;
+  background-color: #1B6F5F !important;
+}
+.label {
+  font-weight: unset !important;
+  text-transform: capitalize;
+}
+.level-title {
+  display: inline;
 }
 .user .avatar {
   margin: unset;
