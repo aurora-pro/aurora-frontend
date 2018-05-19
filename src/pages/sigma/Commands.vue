@@ -7,7 +7,7 @@
         <div class="ui styled accordion category segment animated fadeIn" v-for="category in commands" v-bind:key="category.name"> 
           <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{ category.name }}</div> 
           <div class="content commands"> 
-            <div class="command" v-for="command in category.commands" v-bind:key="command.name"> 
+            <div class="ui comment command" v-for="command in category.commands" v-bind:key="command.name"> 
               <h1>{{ command.names.primary }}</h1> 
               <p v-if=command.desc class="description">{{ command.desc }}</p> 
               <p class="usage">Example: <span>{{ command.usage }}</span></p> 
@@ -128,12 +128,12 @@ export default {
 .ui.accordion {
   width: auto;
   margin: 1rem;
-  font-size: 1rem; }
-.ui.accordion .content { padding: 0.5em 2.5em 1.5em; }
+  font-size: 1rem;
+  padding: unset; }
 .ui.styled.accordion .title { color: rgba(100, 100, 100, 0.9); }
 .ui.styled.accordion .title:hover, .ui.styled.accordion .title.active { color: #1B6F5F  }
-.command:not(:last-child) { margin-bottom: 2rem; }
-.command h1 { font-size: 1.5rem; }
+.command:not(:last-child) { border: 1px solid rgba(34,36,38,.15); padding: 0.25rem 0.25rem 0.25rem 1rem; }
+.command h1 { font-size: 1.2rem; }
 .command h1, .aliases strong { color: #1B6F5F !important; }
 .command h1, .command p { margin-bottom: 0.5rem; }
 p.description { white-space: pre-wrap; }
