@@ -132,7 +132,7 @@ export default {
   padding: unset; }
 .ui.styled.accordion .title { color: rgba(100, 100, 100, 0.9); }
 .ui.styled.accordion .title:hover, .ui.styled.accordion .title.active { color: #1B6F5F  }
-.command:not(:last-child) { border: 1px solid rgba(34,36,38,.15); padding: 0.25rem 0.25rem 0.25rem 1rem; }
+.command { border: 1px solid rgba(34,36,38,.15); padding: 0.25rem 0.25rem 0.25rem 1rem; }
 .command h1 { font-size: 1.2rem; }
 .command h1, .aliases strong { color: #1B6F5F !important; }
 .command h1, .command p { margin-bottom: 0.5rem; }
