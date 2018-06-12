@@ -3,24 +3,27 @@
     <loader id="loader"></loader>
     <div class="ui container fadeIn" style="width: auto;">
       <div class="ui segment">
-        <h1 class="title"><fa icon="fa-terminal"></fa> Commands</h1> 
-        <div class="ui styled accordion category segment animated fadeIn" v-for="category in commands" v-bind:key="category.name"> 
-          <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{ category.name }}</div> 
-          <div class="content commands"> 
-            <div class="ui comment command" v-for="command in category.commands" v-bind:key="command.name"> 
-              <h1>{{ command.names.primary }}</h1> 
-              <p v-if=command.desc class="description">{{ command.desc }}</p> 
-              <p class="usage">Example: <span>{{ command.usage }}</span></p> 
-              <p class="aliases" v-if=command.names.alts> 
-                Alternative names: <strong>{{ command.names.alts.join(', ') }}</strong> 
-              </p> 
-              <p class="owner" v-if=command.admin> 
-                <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-cogs'></fa> Bot owners</strong>!<br /> 
-                <span>The bot owner is the person hosting the bot on their machine.<br /> 
-                This is <strong>not the discord server owner</strong> and <strong>not the person who invited the bot</strong> to the server.<br /></span> 
-              </p> 
-              <p class="partner" v-if=command.partner> 
-                <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-diamond'></fa> Partners</strong>! 
+        <div class="title-container">
+          <h1 class="title"><fa icon="fa-terminal"></fa> Commands</h1>
+          <input id="command-search" class="command-search" type="text" placeholder="Search" v-model="search_term" />
+        </div>
+        <div class="ui styled accordion category segment animated fadeIn" v-for="category in categories" v-bind:key="category.name">
+          <div class="title"><i class="dropdown icon"></i><icon :name=category.icon></icon> {{ category.name }}</div>
+          <div class="content commands">
+            <div class="ui comment command" v-for="command in category.commands" v-bind:key="command.name">
+              <h1>{{ command.names.primary }}</h1>
+              <p v-if=command.desc class="description">{{ command.desc }}</p>
+              <p class="usage">Example: <span>{{ command.usage }}</span></p>
+              <p class="aliases" v-if=command.names.alts>
+                Alternative names: <strong>{{ command.names.alts.join(', ') }}</strong>
+              </p>
+              <p class="owner" v-if=command.admin>
+                <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-cogs'></fa> Bot owners</strong>!<br />
+                <span>The bot owner is the person hosting the bot on their machine.<br />
+                This is <strong>not the discord server owner</strong> and <strong>not the person who invited the bot</strong> to the server.<br /></span>
+              </p>
+              <p class="partner" v-if=command.partner>
+                <strong>Warning:</strong> This command can only be used by <strong><fa icon='fa-diamond'></fa> Partners</strong>!
               </p>
             </div>
           </div>
@@ -32,19 +35,40 @@
 
 <script>
 import $ from 'jquery'
+import Vue from 'vue'
 import './../../../node_modules/semantic-ui-css/components/accordion.js'
 import Navigation from '@/components/common/Navigation'
 import Fa from '@/components/common/FaIcon'
 import Icon from '@/components/common/Icon'
 import Loader from '@/components/common/Loader'
+
 export default {
   name: 'Sigma-commands',
   data () {
     return {
-      commands: []
+      categories: [],
+      timer: 0,
+      search_term: ''
     }
   },
   components: { Navigation, Fa, Icon, Loader },
+  watch: {
+    search_term: function (value) {
+      clearTimeout(this.timer)
+      let api = this.$root.api
+      let here = this
+      this.timer = setTimeout(function () {
+        $.get({
+          url: `${api}/sigma/commands`,
+          dataType: 'json',
+          data: {
+            filter: { name: value }
+          },
+          success: (res) => { Vue.set(here, 'categories', res) }
+        })
+      }, 1000)
+    }
+  },
   beforeMount () {
     this.$root.navigation.conditional = [
       {
@@ -71,7 +95,7 @@ export default {
     let api = this.$root.api
     $.get(`${api}/sigma/commands`, (data) => {
       // if (data.message == 'Internal Server Error') { error }
-      this.commands = data
+      this.categories = data
       $('#loader').hide()
       $('.sigma-cmd-open').show()
     }).fail(() => {
@@ -124,7 +148,27 @@ export default {
 }
 .container { margin-top: 4rem; }
 .container h1 { color: white; }
-@media screen and (max-width: 999px), print { .container h1.title { text-align: center; } }
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.title-container .command-search {
+  display: flex;
+  width: 25vw;
+  margin-left: 20px;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 999px), print {
+  .title-container {
+    width: 100vw;
+    align-items: center;
+  }
+  .title-container .command-search {
+    text-align: center;
+    width: 50vw;
+  }
+}
 .ui.accordion {
   width: auto;
   margin: 1rem;
