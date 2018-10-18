@@ -42,5 +42,29 @@ module.exports = {
         acceptSslCerts: true
       }
     }
+
+      torbrowser: {
+      desiredCapabilities: {
+        browserName: 'tor',
+        javascriptEnabled: true, //will likely have to prompt this
+        acceptSslCerts: true
+       }
+    }
+     chromium: {
+      desiredCapabilities: {
+        browserName: 'chromium',
+        javascriptEnabled: true,
+        acceptSslCerts: true
+       }
+    }
+
+
+    internetexplorer: {
+      desiredCapabilities: {
+        browserName: 'internet explorer',
+        javascriptEnabled: true,
+        acceptSslCerts: true//added some browsers because boredom and simplicity
+      }
+    }
   }
 }
